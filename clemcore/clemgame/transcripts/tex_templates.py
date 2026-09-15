@@ -31,6 +31,7 @@ BUBBLE = {
     "one_track": {
         "player-gm": (None, "$player_name$\\rangle$GM", "&", "& &", 4, 0.6),
         "gm-player": ("0.9,0.9,0.9", "$player_name$\\langle$GM", "& & &", "", 4, 0.6),
+        "player-player": ("0.831,0.929,0.855", "$player_name$\\leftrightarrow$P", "& &", "&", 4, 0.6),
         "gm-gm": ("0.95,0.95,0.95", "GM$|$GM", "& & &", "& &", 2, 0.3)
     },
     "two_tracks": {
@@ -38,6 +39,8 @@ BUBBLE = {
         "player-gm p2": ("1,0.85,0.72", "GM$\\langle$P2", "& & &", "", 4, 0.6),
         "gm-player p1": ("0.9,0.9,0.9", "P1$\\langle$GM", "& &", "&", 4, 0.6),
         "gm-player p2": ("0.9,0.9,0.9", "GM$\\rangle$P2", "& &", "&", 4, 0.6),
+        "player-player p1": ("0.831,0.929,0.855", "P2$\\rightarrow$P1", "&", "& &", 4, 0.6),
+        "player-player p2": ("0.831,0.929,0.855", "P1$\\rightarrow$P2", "& & &", "", 4, 0.6),
         "gm-gm": ("0.95,0.95,0.95", "GM$|$GM", "& & &", "& &", 2, 0.3)
     }
 }
