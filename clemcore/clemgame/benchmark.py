@@ -126,6 +126,9 @@ class GameBenchmark(GameResourceLocator):
         # append game directory to system path for loading game specific dependencies
         sys.path.insert(0, game_spec.game_path)
 
+        # evict any game-local module names that may be stale from a previously loaded game
+        sys.modules.pop("constants", None)
+
         # keep track of potentially additional modules which must be unloaded after the run
         before_load = set(sys.modules.keys())
 
