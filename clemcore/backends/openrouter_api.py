@@ -102,7 +102,7 @@ class OpenRouterModel(openai_api.OpenAIModel):
         message = api_response.choices[0].message
         if message.role != "assistant":  # safety check
             raise AttributeError("Response message role is " + message.role + " but should be 'assistant'")
-        response_text = message.content.strip()
+        response_text = (message.content or "").strip()
         response = json.loads(api_response.json())
 
         return prompt, response, response_text

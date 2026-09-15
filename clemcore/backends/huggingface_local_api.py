@@ -605,6 +605,9 @@ def split_and_clean_batch_outputs(
         if 'cot_output' in model.model_spec.model_config and model.model_spec.model_config['cot_output']:
             cot_content, response_text = split_and_clean_cot_output(response_text, model)
 
+        # FIX: strip again
+        response_text = response_text.strip()
+
         # Prompt and response info for recording raw model inputs and outputs
         prompt_info = {
             "inputs": prompt_text,
